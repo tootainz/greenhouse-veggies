@@ -11,7 +11,7 @@ import * as C from "./constants.js";
 // ---------------------------------------------------------------------------------------------------
 // VEGETABLES
 
-const rawData = await d3.csv("../data/vegetables_greenhouse.csv");
+const rawData = await d3.csv("./data/vegetables_greenhouse.csv");
 const data = rawData
     .filter( (d) => d["laji"] !== "TOTAL VEGETABLES")
     .filter( (d) => d["laji"] !== "TOTAL POTTED VEGETABLES")
