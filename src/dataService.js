@@ -11,7 +11,7 @@ import * as C from "./constants.js";
 // ---------------------------------------------------------------------------------------------------
 // VEGETABLES
 
-const rawData = await d3.csv("./greenhouse-veggies/data/vegetables_greenhouse.csv");
+const rawData = await d3.csv("/greenhouse-veggies/data/vegetables_greenhouse.csv");
 const data = rawData
     .filter( (d) => d["laji"] !== "TOTAL VEGETABLES")
     .filter( (d) => d["laji"] !== "TOTAL POTTED VEGETABLES")
@@ -40,7 +40,7 @@ const vegetables = d3.group(data, (d) => d["laji"] )
 // ---------------------------------------------------------------------------------------------------
 // TEMPS
 
-const rawTempData = await d3.csv("../data/temps.csv");
+const rawTempData = await d3.csv("/greenhouse-veggies/data/temps.csv");
 
 // Filter only the same years that the vegetables data covers
 const temps = rawTempData
